@@ -120,4 +120,77 @@ przez autora w celu naprawienie ich.
 yay <nazwa_aplilacji>
 ```
 
-Wyświetli nam ponumerowaną listę aplikacji i ich opisów, w których nazwach znaleziono <nazwa_aplikacji>. Należy wybrać jedną (wpisać numer z klawiatury) i zatwierdzić Enterem. Można wybrać kilka np 1 2 3, albo tak samo kilka 1-3. Przy wyborze kilku zostaną po prostu zainstalowane wszystkie.
+Wyświetli nam ponumerowaną listę aplikacji i ich opisów,
+w których nazwach znaleziono <nazwa_aplikacji>.
+Należy wybrać jedną (wpisać numer z klawiatury)
+i zatwierdzić Enterem. Można wybrać kilka np 1 2 3,
+albo tak samo kilka 1-3. Przy wyborze kilku zostaną po prostu zainstalowane wszystkie.
+
+# Wskazówki
+
+Jezeli chcemy zainstalować jakąś konkretna aplikację,
+której nazwę z znamy, to nalepiej zaczac od wyszukania jej
+używając package managera.
+
+Na przykładzie Firefox:
+
+* Debian based
+```bash
+apt search firefox
+```
+
+lub
+
+* Arch based
+
+```bash
+pacman -Ss firefox
+```
+
+Jeżeli znaleźliśmy na liście wyników interesującą nas aplikację,
+to możemy śmiało zainstalować zgodnie z instrukcjami wyżej, czyli:
+
+* Debian based
+```bash
+apt install firefox
+```
+
+lub
+
+* Arch based
+
+```bash
+pacman -S firefox
+```
+
+Jeżeli nie znaleźliśmy danej aplikacji, to zachęcam do
+skorzystania z [duckduckgo.com](https://www.duckduckgo.com/)
+i wyszukania "Ubuntu install firefox" albo "arch linix install forefox"
+
+* [Arch - pierwszy wynik to ArchWiki](https://wiki.archlinux.org/index.php/Firefox)
+    Mamy tam ślicznie wszystko opisane w sekcji "Installing",
+    a w szczególności podaną nazwę paczki, czyli "firefox".
+
+    [ArchWiki](https://wiki.archlinux.org/) to wspaniałe kompedium wiedzy.
+    Większość problemów jest tam opisana, także zachęcam do korzystania.
+
+* [Ubuntu - pierwszy wynik](https://vitux.com/4-ways-to-install-mozilla-firefox-in-ubuntu/)
+   Autor sugeruje użycie Snap, jednak nie polecam tego rozwiązania.
+   Więcej na temat Snap w sekcji Flatpak/Snap. Jednak niżej widzimy
+   opis instalacji z oficjalnych repozytoriów ubuntu, a w szczególności
+   <nazwa_aplikacji>, czyli "firefox" zapamiętujemy ją i podążamy dalej
+   zgodnie z instrukcjami instalacji opisanymi tu wcześniej. 
+
+Dostaniemy dotrzemy na jakąś stronę, gdzie ktoś opisał
+proces instalacji tej apkikacji. Interesuje nas raczej tylko
+<nazwa_aplickaji> dla naszego systemu np "firefox".
+
+Nazwy aplikacji (paczek) różnią się czasami pomiędzy systemami,
+dlatego wyszukując zalecane jest dodanie nazwy systemu bazowego
+tj. Arch, lub "Ubuntu" - nie Debian, ponieważ Ubuntu bazuje na Debianie,
+ale Debian jest dużo mniej popularny i szanse na znalezienie czegoś
+są mniejsze.
+
+
+
+Mając ta nazwę instalujemy zgodnie z instrukcjami wyżsj
