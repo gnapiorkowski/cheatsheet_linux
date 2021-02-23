@@ -11,11 +11,15 @@ upgrade aktualizuje aplikacje zainstalowanie w systemie
 
 ## Szukanie aplikacji
 
+```bash
 apt search <nazwa_aplikacji>
+```
 
 ## Instalowanie aplikacji
 
+```bash
 sudo apt install <nazwa_aplilacji>
+```
 
 ## Odinsyalowanie aplikacji
 
