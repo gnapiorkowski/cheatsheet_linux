@@ -7,7 +7,7 @@ sudo apt update && sudo apt upgrade
 ```
 update aktualizuje bazę danych z aplikacjami
 
-upgrade aktualizuje aplikacje zainstalowanie w systemie
+upgrade aktualizuje aplikacje na podstawie w.w. bazy danych.
 
 ## Szukanie aplikacji
 
