@@ -103,7 +103,14 @@ W teorii powinno znaleźć Firefox, Chromium, Chrome, Brave o ile mamy je zainst
 
 ## AUR
 
-pacman, to narzędzie analogiczne do apptitude. Jest podstawowym package managerem w systemach Arch based. Jednak mamy jeszcze AUR (Arch User Repo.) - Repozytoria Użytkowników Arch, w których są aplikacje wrzucane przez użytkowników. Dostajemy się tam używając *yay*
+pacman, to narzędzie analogiczne do apptitude.
+Jest podstawowym package managerem w systemach Arch based.
+Jednak mamy jeszcze AUR (Arch User Repo.)
+- Repozytoria Użytkowników Arch,
+w których są aplikacje wrzucane przez użytkowników.
+Dostajemy się tam używając *yay* jak poniżej.
+***Bardzo przydatne, ponieważ znacznie ułatwia instalowanie
+mniej popularnych aplikacji***
 
 ```bash
 yay <nazwa_aplilacji>
