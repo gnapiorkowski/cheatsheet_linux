@@ -1,6 +1,6 @@
-#Debian Based (Ubuntu/Xubuntu/Lubuntu/Debian/...) (Laptop Dell latitude e6330)
+# Debian Based (Ubuntu/Xubuntu/Lubuntu/Debian/...) (Laptop Dell latitude e6330)
 
-##Aktualizacja systemu (raz na tydzień dwa wypadałoby robić)
+## Aktualizacja systemu (raz na tydzień dwa wypadałoby robić)
 
 ```bash
 sudo apt update && sudo apt upgrade
@@ -9,15 +9,15 @@ update aktualizuje bazę danych z aplikacjami
 
 upgrade aktualizuje aplikacje zainstalowanie w systemie
 
-##Szukanie aplikacji
+## Szukanie aplikacji
 
 apt search <nazwa_aplikacji>
 
-##Instalowanie aplikacji
+## Instalowanie aplikacji
 
 sudo apt install <nazwa_aplilacji>
 
-##Odinsyalowanie aplikacji
+## Odinsyalowanie aplikacji
 
 ```bash
 apt remove <nazwa_aplikacji>
@@ -30,9 +30,9 @@ apt purge <nazwa_aplikacji>
 
 usuwa razem z plikami konfiguracyjnymi - używać zawsze, jak nie masz w planach ponownie instalować tej aplikacji (oszczędza zaśmiecania systemu)
 
-#Arch Based (Arch/Arco Linux/ Manjaro/...) (Laptop lenovo ThinkPad)
+# Arch Based (Arch/Arco Linux/ Manjaro/...) (Laptop lenovo ThinkPad)
 
-##Aktualizacja systemu (raz na tydzień dwa wypadałoby robić)
+## Aktualizacja systemu (raz na tydzień dwa wypadałoby robić)
 
 ```bash
 sudo pacman -Syu
@@ -43,20 +43,20 @@ y oznacza updare
 u oznacza upgrade
 nigdy NIE używać osobno np ``` sudo pacman -Sy ``` na systemach typu Arch
 
-##Szukanie aplikacji
+## Szukanie aplikacji
 
 ```bash
 pacman -Ss <nazwa_aplikacji>
 ```
 
 
-##Instalowanie aplikacji
+## Instalowanie aplikacji
 
 ```bash
 sudo pacman -S <nazwa_aplikacji>
 ```
 
-##Odinsyalowanie aplikacji
+## Odinsyalowanie aplikacji
 
 ```bash
 sudo pacman -Rns <nazwa_aplikacji>
@@ -65,13 +65,13 @@ sudo pacman -Rns <nazwa_aplikacji>
 usuwa razem z plikami konfiguracyjnymi - używać zawsze, pozostawianie och rzadko kiedy miałoby sens, a przy ponownej instalacji one i tak się tworzą automatycznie.
 
 
-##Szukanie w liście zainstalowanych aplikacji
+## Szukanie w liście zainstalowanych aplikacji
 
 ```bash
 pacman -Qs <nazwa_aplikacji>
 ```
 
-##Pacman nazwa_aplikacji
+## Pacman nazwa_aplikacji
 
 Pacman przy nazwach aplikacji dodaje opisy. Dzięki temu możemy wyszukiwać także po nich.
 
@@ -97,7 +97,7 @@ pacman -Qs web browser
 
 W teorii powinno znaleźć Firefox, Chromium, Chrome, Brave o ile mamy je zainstalowane.
 
-##AUR
+## AUR
 
 pacman, to narzędzie analogiczne do apptitude. Jest podstawowym package managerem w systemach Arch based. Jednak mamy jeszcze AUR (Arch User Repo.) - Repozytoria Użytkowników Arch, w których są aplikacje wrzucane przez użytkowników. Dostajemy się tam używając *yay*
 
