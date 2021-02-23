@@ -109,7 +109,12 @@ Jednak mamy jeszcze AUR (Arch User Repo.) - Repozytoria Użytkowników Arch,
 w których są aplikacje wrzucane przez użytkowników.
 Dostajemy się tam używając *yay* jak poniżej.
 ***Bardzo przydatne, ponieważ znacznie ułatwia instalowanie
-mniej popularnych aplikacji***
+mniej popularnych aplikacji.*** Aczkolwien należy zachować szczególną
+ostrożnasc ponieważ te paczki nie przechodzą prkawie żadnej
+weryfikacji. ***Nigdy nie instalować paczek oznaczonych
+OUT OF DATE*** Jeżeli są tak zonaczone, to prawie zawsze
+dlatego, że są zepsute i nie zostały zaaktualowane
+przez autora w celu naprawienie ich.
 
 ```bash
 yay <nazwa_aplilacji>
