@@ -255,7 +255,7 @@ jeżeli nie ma tam *...:$USER/.local/bin/:...*, to dodajemy
 to w ten sposób
 
 ```bash
-echo "export PATH=/home/\$USER/.local/bin/:\$PATH" >> ~/.profile
+echo "export PATH=/home/\$USER/.local/bin/:\$PATH" >> ~/.profile; export PATH=/home/$USER/.local.bin/:$PATH
 ```
 
 2. Tworzymy plik *~/.local/bin/<nazwa_aplikacji>* wybramym edytorem tekstowym,
@@ -265,6 +265,12 @@ o treści:
 #!/bin/sh
 
 flatpak run com.spotify.Client
+```
+
+I sprawiamy, żeby był możliwy do uruchomienia:
+
+```bash
+chmod +x ~/.local/bin/<nazwa_pliku>
 ```
 
 lub robimy to jednym poleceniem, używająch echo:
