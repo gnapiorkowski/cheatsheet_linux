@@ -193,4 +193,85 @@ są mniejsze.
 
 
 
-Mając ta nazwę instalujemy zgodnie z instrukcjami wyżsj
+Mając ta nazwę instalujemy zgodnie z instrukcjami wyżej.
+
+# Flatpak/Snap
+
+Flatpak i Snap to alternatywne managery paczek w systemie (aplikacji).
+Różnica jest taka, że Snap jest zamknięty i Canonical (firma od Ubuntu)
+ma nad nim pełną kontrolę - nie jest to zdrowe, dlatego preferujemy Flatpak.
+
+Flatpak i Snap różnią się głównie tym od domyślnych systemowych managerów paczek,
+że zamiast korzystać z zależności (dependencies) zaimstalowanych na systemie,
+instalują je osobno dla każdej aplikacji.
+Jest to łatwiejsze dla developerów,
+ponieważ czasami aktualizacja jakieś biblioteki (zestaw narzędzi dla programisty)
+powoduje, że aplikacja nie działa poprawnie.
+
+Jednak ma to bardzo negatywną konotację - powoduje, że developerzy
+nie aktualizują swoich aplikacji tak często, jak jest to wymagane korzystając z najnowszych
+wersji bibliotek.
+
+Jeżeli na przykład jakaś biblioteka, albo inna zależność (np. inna aplikacja)
+miała dziury pozwalające na wuykorzystanie ją do penetracji
+zabazpieczeń systemu, to przy aktualizacji normalniej (np. pacman -Syu)
+ta dziura zostaje załatana.
+Jednak w przypadku flatpak/snap nie mamy takiej gwarancji,
+aktualizaja zależności leży w gestii jej developera...
+
+***Dlatego jeżeli tylko jest to możliwe, to preferowane jest instalowanie
+aplikacji z odicjalnych repozytorów, przy użyciu package managerów,
+takich ja Pacman, albo Apptitude***
+
+Czasami jednak nie ma innych sensownych rozwiązań,
+jak w przypadk Spotify na Ubuntu.
+
+```bash
+flapak search spotify
+```
+
+```bash
+flatpak install com.spotify.Client
+```
+
+I włączenie aplikacji:
+
+```bash
+flatpak run com.spotify.Client
+```
+
+Czasami po takiej operacji nie będziemy mieli skrótu do tej aplikacji,
+a używanie flatpak run ... jest meczące.
+Dlatego warto dodać sobie plik uruchamialny do
+*.local/bin*, żeby móc używać go z np. DMenu (w mojej konfiguracji
+Alt+Spacja odpala DMenu)
+
+1. upewniamy się, że *.local/bin* jest w naszym PATH
+```bash
+echo $PATH
+```
+
+jeżeli nie ma tam *...:$USER/.local/bin/:...*, to dodajemy
+to w ten sposób
+
+```bash
+echo "export PATH=/home/\$USER/.local/bin/:\$PATH" >> ~/.profile
+```
+
+2. Tworzymy plik *~/.local/bin/<nazwa_aplikacji>* wybramym edytorem tekstowym,
+o treści:
+
+```bash
+#!/bin/sh
+
+flatpak run com.spotify.Client
+```
+
+lub robimy to jednym poleceniem, używająch echo:
+
+```bash
+touch ~/.local/bin/spotify && echo $"#!/bin/sh\nflatpak run com.spotify.Client" > ~/.local/bin/spotify
+```
+
+3. [(opcjonalnie) Dodajemy plik .desktop, żeby mieć skrót z "Menu Start"](https://wiki.archlinux.org/index.php/Desktop_entries#Application_entry)
+
