@@ -24,7 +24,7 @@ sudo apt install <nazwa_aplilacji>
 ## Odinsyalowanie aplikacji
 
 ```bash
-apt remove <nazwa_aplikacji>
+sudo apt remove <nazwa_aplikacji>
 ```
 pozostawia pliki konfiguracyjne - przydatne, jak chcesz kiedyś ponownie zainstalować tą aplikację
 
