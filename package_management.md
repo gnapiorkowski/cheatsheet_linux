@@ -268,9 +268,10 @@ flatpak run com.spotify.Client
 ```
 
 lub robimy to jednym poleceniem, używająch echo:
+***Póki co poniższy skrypt nie działa!!!***
 
 ```bash
-touch ~/.local/bin/spotify && echo $"#!/bin/sh\nflatpak run com.spotify.Client" > ~/.local/bin/spotify
+export FILE=spotify; [ -f ~/.local/bin/$FILE ] && echo "Plik spotify już istnieje. Nie udało się stworzyc pliku $FILE..."; [ -f ~/.local/bin/$FILE ] || { echo $"#!/bin/sh\nflatpak run com.spotify.Client" > ~/.local/bin/$FILE; chmod +x ~/.local/bin/$FILE; echo "Udało się stworzyć $FILE" }
 ```
 
 3. [(opcjonalnie) Dodajemy plik .desktop, żeby mieć skrót z "Menu Start"](https://wiki.archlinux.org/index.php/Desktop_entries#Application_entry)
