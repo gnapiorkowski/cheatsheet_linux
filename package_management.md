@@ -273,10 +273,10 @@ I sprawiamy, żeby był możliwy do uruchomienia:
 chmod +x ~/.local/bin/<nazwa_pliku>
 ```
 
-lub robimy to jednym poleceniem, używająch echo:
+lub robimy to jednym poleceniem, używająch echo (zastępujemy pierwsze "spotify" nazwą aplikacji - na początku w FILE=... i później w flatpak run *com.spotify.Client*):
 
 ```bash
-FILE=spotify; [ -f ~/.local/bin/$FILE ] && echo "Plik spotify już istnieje. Nie udało się stworzyc pliku $FILE..."; [ -f ~/.local/bin/$FILE ] || { echo -e '#!/bin/sh\nflatpak run com.spotify.Client' > ~/.local/bin/$FILE; chmod +x ~/.local/bin/$FILE; echo "Udało się stworzyć $FILE" }
+FILE=spotify; [ -f ~/.local/bin/$FILE ] && echo "Plik $FILE już istnieje. Nie udało się stworzyc pliku $FILE..."; [ -f ~/.local/bin/$FILE ] || { echo -e '#!/bin/sh\nflatpak run com.spotify.Client' > ~/.local/bin/$FILE; chmod +x ~/.local/bin/$FILE; echo "Udało się stworzyć $FILE" }
 ```
 
 3. [(opcjonalnie) Dodajemy plik .desktop, żeby mieć skrót z "Menu Start"](https://wiki.archlinux.org/index.php/Desktop_entries#Application_entry)
