@@ -281,3 +281,10 @@ FILE=spotify; [ -f ~/.local/bin/$FILE ] && echo "Plik spotify już istnieje. Nie
 
 3. [(opcjonalnie) Dodajemy plik .desktop, żeby mieć skrót z "Menu Start"](https://wiki.archlinux.org/index.php/Desktop_entries#Application_entry)
 
+## Aktualizacja aplikacji flatpak
+
+
+```bash
+flatpak update
+```
+
